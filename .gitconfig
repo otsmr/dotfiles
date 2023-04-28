@@ -1,0 +1,11 @@
+[user]
+	name = otsmr
+	email = git@tsmr.eu
+[color]
+# Colorize as much as possible by default
+	ui = auto
+[init]
+	defaultBranch = main
+[core]
+    # Global excludes config.
+    excludesfile = "~/.gitexcludes"

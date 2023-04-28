@@ -30,7 +30,7 @@ local function on_attach(_, buffer)
     -- Hover actions
     vim.keymap.set("n", "<Leader>r", rt.hover_actions.hover_actions, { buffer = buffer })
     -- Code action groups
-    vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group, { buffer = buffer })
+    -- vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group, { buffer = buffer })
 end
 
 -- Configure LSP through rust-tools.nvim plugin.

@@ -103,6 +103,7 @@ eval "$(pyenv init -)"
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /opt/homebrew/bin/terraform terraform
+tmux
 
 export PATH="~/.cargo/bin:$PATH"
 export PATH="/opt/homebrew/opt/tcl-tk/bin:$PATH"
@@ -113,4 +114,6 @@ export PATH="/usr/local/opt/openssl@3/bin:$PATH"
 export PATH="/opt/homebrew/opt/openssl@3/bin:$PATH"
 alias curl="/opt/homebrew/opt/curl/bin/curl"
 
+alias kali='docker run --rm --name kali  -it -v "$(PWD):/host" -w "/host" kali_installed /bin/bash'
+alias kalie='docker exec -it kali /bin/bash'
 

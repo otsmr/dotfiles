@@ -3,12 +3,22 @@ local lsp = require("lsp-zero")
 lsp.preset("recommended")
 
 lsp.ensure_installed({
-  'tsserver',
-  'eslint',
   'sumneko_lua',
   'rust_analyzer',
+  'bash-language-server',
+  'python-lsp-server',
+  'pylint',
+  'pyright',
+  'yaml-language-server'
 })
 
+lsp.configure('yamlls', {
+  settings = {
+    yaml = {
+      keyOrdering = false
+    }
+  }
+})
 -- Fix Undefined global 'vim'
 lsp.configure('sumneko_lua', {
     settings = {

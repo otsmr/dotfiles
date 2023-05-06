@@ -43,7 +43,10 @@ packer.init {
 }
 
 return require('packer').startup(function(use)
-
+  use {
+      "williamboman/mason.nvim",
+      run = ":MasonUpdate" -- :MasonUpdate updates registry contents
+  }
   use 'wbthomason/packer.nvim'
   use 'ThePrimeagen/git-worktree.nvim'
 

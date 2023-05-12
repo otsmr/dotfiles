@@ -5,11 +5,6 @@ lsp.preset("recommended")
 lsp.ensure_installed({
   'sumneko_lua',
   'rust_analyzer',
-  'bash-language-server',
-  'python-lsp-server',
-  'pylint',
-  'pyright',
-  'yaml-language-server'
 })
 
 lsp.configure('yamlls', {

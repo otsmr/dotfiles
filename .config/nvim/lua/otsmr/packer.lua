@@ -62,21 +62,13 @@ return require('packer').startup(function(use)
     end
   })
 
-  -- Snippet engine
-  use('hrsh7th/vim-vsnip')
-
   -- Adds extra functionality over rust analyzer
   use({'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'})
-  use('nvim-treesitter/playground')
-  use('ThePrimeagen/harpoon')
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
 
-
   -- Rust
-  use("mattfbacon/rust-tools.nvim")
-  use('nvim-lua/plenary.nvim')
-  use('mfussenegger/nvim-dap')
+  use 'simrat39/rust-tools.nvim'
   use('rust-lang/rust.vim')
 
 
@@ -103,10 +95,7 @@ return require('packer').startup(function(use)
 	  }
   }
 
-
   -- Layout and Features
-  use("folke/zen-mode.nvim")
-  use("akinsho/toggleterm.nvim")
   use {
 	'nvim-tree/nvim-tree.lua',
 	requires = {
@@ -115,19 +104,12 @@ return require('packer').startup(function(use)
   }
   use("akinsho/bufferline.nvim")
   use("folke/tokyonight.nvim")
+  vim.cmd[[colorscheme tokyonight]]
   use("moll/vim-bbye")
   use {
-	'nvim-lualine/lualine.nvim',
-	requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
-  use("goolord/alpha-nvim")
-
-	--   use({
-	--     "Pocco81/auto-save.nvim",
-	--     config = function()
-	--       require("auto-save").setup()
-	-- end,
-	--   })
 
   use({
     "terrortylor/nvim-comment",

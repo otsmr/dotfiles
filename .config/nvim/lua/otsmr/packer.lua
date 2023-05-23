@@ -96,6 +96,7 @@ return require('packer').startup(function(use)
   }
 
   -- Layout and Features
+  use("akinsho/toggleterm.nvim")
   use {
 	'nvim-tree/nvim-tree.lua',
 	requires = {

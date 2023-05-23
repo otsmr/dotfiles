@@ -79,11 +79,6 @@ _G.packer_plugins = {
     path = "/Users/privat/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
-  ["alpha-nvim"] = {
-    loaded = true,
-    path = "/Users/privat/.local/share/nvim/site/pack/packer/start/alpha-nvim",
-    url = "https://github.com/goolord/alpha-nvim"
-  },
   ["bufferline.nvim"] = {
     loaded = true,
     path = "/Users/privat/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
@@ -125,10 +120,10 @@ _G.packer_plugins = {
     path = "/Users/privat/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
-  harpoon = {
+  ["git-worktree.nvim"] = {
     loaded = true,
-    path = "/Users/privat/.local/share/nvim/site/pack/packer/start/harpoon",
-    url = "https://github.com/ThePrimeagen/harpoon"
+    path = "/Users/privat/.local/share/nvim/site/pack/packer/start/git-worktree.nvim",
+    url = "https://github.com/ThePrimeagen/git-worktree.nvim"
   },
   ["lsp-zero.nvim"] = {
     loaded = true,
@@ -166,11 +161,6 @@ _G.packer_plugins = {
     path = "/Users/privat/.local/share/nvim/site/pack/packer/start/nvim-comment",
     url = "https://github.com/terrortylor/nvim-comment"
   },
-  ["nvim-dap"] = {
-    loaded = true,
-    path = "/Users/privat/.local/share/nvim/site/pack/packer/start/nvim-dap",
-    url = "https://github.com/mfussenegger/nvim-dap"
-  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/Users/privat/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
@@ -196,11 +186,6 @@ _G.packer_plugins = {
     path = "/Users/privat/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
-  playground = {
-    loaded = true,
-    path = "/Users/privat/.local/share/nvim/site/pack/packer/start/playground",
-    url = "https://github.com/nvim-treesitter/playground"
-  },
   ["plenary.nvim"] = {
     loaded = true,
     path = "/Users/privat/.local/share/nvim/site/pack/packer/start/plenary.nvim",
@@ -209,7 +194,7 @@ _G.packer_plugins = {
   ["rust-tools.nvim"] = {
     loaded = true,
     path = "/Users/privat/.local/share/nvim/site/pack/packer/start/rust-tools.nvim",
-    url = "https://github.com/mattfbacon/rust-tools.nvim"
+    url = "https://github.com/simrat39/rust-tools.nvim"
   },
   ["rust.vim"] = {
     loaded = true,
@@ -220,11 +205,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/privat/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
-  },
-  ["toggleterm.nvim"] = {
-    loaded = true,
-    path = "/Users/privat/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
-    url = "https://github.com/akinsho/toggleterm.nvim"
   },
   ["tokyonight.nvim"] = {
     loaded = true,
@@ -245,16 +225,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/privat/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
-  },
-  ["vim-vsnip"] = {
-    loaded = true,
-    path = "/Users/privat/.local/share/nvim/site/pack/packer/start/vim-vsnip",
-    url = "https://github.com/hrsh7th/vim-vsnip"
-  },
-  ["zen-mode.nvim"] = {
-    loaded = true,
-    path = "/Users/privat/.local/share/nvim/site/pack/packer/start/zen-mode.nvim",
-    url = "https://github.com/folke/zen-mode.nvim"
   }
 }
 

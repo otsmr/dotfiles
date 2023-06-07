@@ -24,13 +24,6 @@ local function on_attach(_, buffer)
     -- Goto previous/next diagnostic warning/error
     vim.keymap.set("n", "g,", vim.diagnostic.goto_prev, keymap_opts)
     vim.keymap.set("n", "g.", vim.diagnostic.goto_next, keymap_opts)
-
-    local rt = require("rust-tools")
-
-    -- Hover actions
-    vim.keymap.set("n", "<Leader>r", rt.hover_actions.hover_actions, { buffer = buffer })
-    -- Code action groups
-    -- vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group, { buffer = buffer })
 end
 
 -- Configure LSP through rust-tools.nvim plugin.

@@ -103,7 +103,7 @@ eval "$(pyenv init -)"
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /opt/homebrew/bin/terraform terraform
-if [ "$TMUX" = "" ]; then tmux; fi
+# if [ "$TMUX" = "" ]; then tmux; fi
 
 export PATH="~/.cargo/bin:$PATH"
 export PATH="/opt/homebrew/opt/tcl-tk/bin:$PATH"

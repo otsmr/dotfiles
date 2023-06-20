@@ -70,7 +70,7 @@ ZSH_THEME="robbyrussell" # set by `omz`
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-z)
+plugins=(git zsh-autosuggestions zsh-z last-working-dir)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -117,3 +117,4 @@ alias curl="/opt/homebrew/opt/curl/bin/curl"
 alias kali='docker run --rm --name kali --privileged -it -v "$(PWD):/host" -w "/host" kali_installed /bin/bash'
 alias kalie='docker exec -it kali /bin/bash'
 
+eval "$(zellij setup --generate-auto-start zsh)"

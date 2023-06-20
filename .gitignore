@@ -31,6 +31,11 @@
 !.config/picom
 !.config/picom/*
 
+!.config/zellij
+!.config/zellij/*
+!.config/zellij/*/*
+
+
 !.config/polybar
 !.config/polybar/*
 !.config/polybar/*/*

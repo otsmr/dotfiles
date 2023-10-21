@@ -108,6 +108,9 @@ complete -o nospace -C /opt/homebrew/bin/terraform terraform
 export PATH="~/.cargo/bin:$PATH"
 export PATH="/opt/homebrew/opt/tcl-tk/bin:$PATH"
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+export LLVM_BUILD_ROOT=/opt/homebrew/opt/llvm
+export LLVM_ROOT=/opt/homebrew/opt/llvm
+export DYLD_FRAMEWORK_PATH=/Applications/Xcode.app/Contents/SharedFrameworks
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export PATH="/usr/local/opt/openssl@3/bin:$PATH"
@@ -118,3 +121,4 @@ alias kali='docker run --rm --name kali --privileged -it -v "$(PWD):/host" -w "/
 alias kalie='docker exec -it kali /bin/bash'
 
 eval "$(zellij setup --generate-auto-start zsh)"
+export PATH="/opt/homebrew/opt/openssl@3/bin:$PATH"

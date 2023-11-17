@@ -1,13 +1,3 @@
-local status_ok, nvim_tree = pcall(require, "nvim-tree")
-if not status_ok then
-  return
-end
-
-local config_status_ok, nvim_tree_config = pcall(require, "nvim-tree.config")
-if not config_status_ok then
-  return
-end
-
 local function on_attach(bufnr)
   local api = require('nvim-tree.api')
   local function opts(desc)
@@ -25,7 +15,7 @@ local function on_attach(bufnr)
 
 end
 
-nvim_tree.setup {
+require("nvim-tree").setup {
   on_attach = on_attach,
   -- update_focused_file = {
   --   enable = true,

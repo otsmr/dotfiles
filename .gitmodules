@@ -1,0 +1,10 @@
+[submodule "tmux/plugins/tpm"]
+	path = tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
+	branch = master
+[submodule ".zsh-plugins/zsh-z"]
+	path = .zsh-plugins/zsh-z
+	url = https://github.com/agkozak/zsh-z
+[submodule ".zsh-plugins/zsh-autosuggestions"]
+	path = .zsh-plugins/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions

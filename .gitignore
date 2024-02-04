@@ -44,4 +44,7 @@
 !.config/ranger
 !.config/ranger/*
 
+!.zsh-plugins
+!.zsh-plugins/*
+
 .DS_Store

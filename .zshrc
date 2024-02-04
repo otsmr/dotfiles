@@ -72,7 +72,10 @@ ZSH_THEME="robbyrussell" # set by `omz`
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git zsh-autosuggestions zsh-z last-working-dir)
 
-source $ZSH/oh-my-zsh.sh
+source ~/.zsh-plugins/zsh-z/zsh-z.plugin.zsh
+source ~/.zsh-plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -103,22 +106,32 @@ eval "$(pyenv init -)"
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /opt/homebrew/bin/terraform terraform
-# if [ "$TMUX" = "" ]; then tmux; fi
+
 
 export PATH="~/.cargo/bin:$PATH"
 export PATH="/opt/homebrew/opt/tcl-tk/bin:$PATH"
-export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
-export LLVM_BUILD_ROOT=/opt/homebrew/opt/llvm
-export LLVM_ROOT=/opt/homebrew/opt/llvm
-export DYLD_FRAMEWORK_PATH=/Applications/Xcode.app/Contents/SharedFrameworks
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export PATH="/usr/local/opt/openssl@3/bin:$PATH"
 export PATH="/opt/homebrew/opt/openssl@3/bin:$PATH"
-alias curl="/opt/homebrew/opt/curl/bin/curl"
+export PATH="/opt/homebrew/opt/z3/bin/:$PATH"
+export DYLD_FRAMEWORK_PATH=/Applications/Xcode.app/Contents/SharedFrameworks
 
-alias kali='docker run --rm --name kali --privileged -it -v "$(PWD):/host" -w "/host" kali_installed /bin/bash'
-alias kalie='docker exec -it kali /bin/bash'
+LLVM_VERSION="17"
+export PATH="/opt/homebrew/opt/llvm@$LLVM_VERSION/bin:$PATH"
+export LLVM_BUILD_ROOT="/opt/homebrew/opt/llvm@$LLVM_VERSION"
+export LLVM_ROOT="/opt/homebrew/opt/llvm@$LLVM_VERSION"
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# alias curl="/opt/homebrew/opt/curl/bin/curl"
+# alias kali='docker run --rm --name kali --privileged -it -v "$(PWD):/host" -w "/host" kali_installed /bin/bash'
+# alias kalie='docker exec -it kali /bin/bash'
+
+
+
+
+
+eval "$(starship init zsh)"
 eval "$(zellij setup --generate-auto-start zsh)"
-export PATH="/opt/homebrew/opt/openssl@3/bin:$PATH"
+
+

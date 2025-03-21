@@ -1,0 +1,13 @@
+format = """[➜](green) $username\
+$hostname\
+$directory\
+$git_branch\
+$git_state\
+$git_status\
+$package\
+$rust\
+$cmd_duration\
+$status\
+$character"""
+
+add_newline = false

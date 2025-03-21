@@ -9,3 +9,7 @@ fi
 if [ ! -L ~/.zshrc ]; then
   ln -s "$(pwd)/.zshrc" ~/.zshrc
 fi
+
+if [ ! -L ~/.config/starship.toml ]; then
+  ln -s "$(pwd)/.config/starship.toml" ~/.config/starship.toml
+fi

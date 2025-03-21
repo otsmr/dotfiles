@@ -11,6 +11,6 @@ if true then return {
         end,
       },
     },
-  }
+  },
 }
 end

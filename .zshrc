@@ -11,6 +11,7 @@ source $ZSH/oh-my-zsh.sh
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 export PATH="/opt/homebrew/opt/rustup/bin:$PATH"
+export PATH="/Users/tobi/Documents/programs/flutter/bin:$PATH"
 
 eval "$(starship init zsh)"
 

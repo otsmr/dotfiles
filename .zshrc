@@ -1,14 +1,14 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
-# Path to your oh-my-zsh installation.
-export ZSH="/Users/privat/.oh-my-zsh"
+# Path to your Oh My Zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
+# load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell" # set by `omz`
+ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -70,12 +70,9 @@ ZSH_THEME="robbyrussell" # set by `omz`
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-z last-working-dir)
+plugins=(git fzf rust z)
 
-source ~/.zsh-plugins/zsh-z/zsh-z.plugin.zsh
-source ~/.zsh-plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-# source $ZSH/oh-my-zsh.sh
+source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -88,50 +85,28 @@ source ~/.zsh-plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
 # else
-#   export EDITOR='mvim'
+#   export EDITOR='nvim'
 # fi
 
 # Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+# export ARCHFLAGS="-arch $(uname -m)"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# Set personal aliases, overriding those provided by Oh My Zsh libs,
+# plugins, and themes. Aliases can be placed here, though Oh My Zsh
+# users are encouraged to define aliases within a top-level file in
+# the $ZSH_CUSTOM folder, with .zsh extension. Examples:
+# - $ZSH_CUSTOM/aliases.zsh
+# - $ZSH_CUSTOM/macos.zsh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-eval "$(pyenv init -)"
-
-autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /opt/homebrew/bin/terraform terraform
-
-
-export PATH="~/.cargo/bin:$PATH"
-export PATH="/opt/homebrew/opt/tcl-tk/bin:$PATH"
-export PATH="/usr/local/opt/openssl@3/bin:$PATH"
-export PATH="/opt/homebrew/opt/openssl@3/bin:$PATH"
-export PATH="/opt/homebrew/opt/z3/bin/:$PATH"
-export DYLD_FRAMEWORK_PATH=/Applications/Xcode.app/Contents/SharedFrameworks
-
-LLVM_VERSION="17"
-export PATH="/opt/homebrew/opt/llvm@$LLVM_VERSION/bin:$PATH"
-export LLVM_BUILD_ROOT="/opt/homebrew/opt/llvm@$LLVM_VERSION"
-export LLVM_ROOT="/opt/homebrew/opt/llvm@$LLVM_VERSION"
-
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# alias curl="/opt/homebrew/opt/curl/bin/curl"
-# alias kali='docker run --rm --name kali --privileged -it -v "$(PWD):/host" -w "/host" kali_installed /bin/bash'
-# alias kalie='docker exec -it kali /bin/bash'
 
 
 
 
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-eval "$(starship init zsh)"
-eval "$(zellij setup --generate-auto-start zsh)"
-
+export PATH="/opt/homebrew/opt/rustup/bin:$PATH"
 

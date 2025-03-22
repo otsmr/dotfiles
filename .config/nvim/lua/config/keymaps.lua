@@ -2,8 +2,14 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
+-- local map = LazyVim.safe_keymap_set
+
+vim.keymap.set("n", "<C-f>", "<leader>ff", { desc = "Split Window Below", remap = true })
+vim.keymap.set("n", "<C-f>", "<leader>ff", { desc = "Split Window Below", remap = true })
+
 vim.keymap.set("i", "jk", "<ESC>", opts)
-vim.keymap.set("n", "<C-f>", ":Telescope find_files<CR>", opts)
+local actions = require("telescope.actions")
+-- vim.keymap.set("n", "<C-f>", actions.find_file, opts)
 vim.keymap.set("n", "<S-q>", "<cmd>Bdelete!<CR>", opts)
 
 vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)

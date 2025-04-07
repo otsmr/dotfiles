@@ -8,6 +8,12 @@ plugins=(git fzf rust z)
 source $ZSH/oh-my-zsh.sh
 
 
+export PATH="/home/linuxbrew/.linuxbrew/bin/:$PATH"
+
+if [ -f /home/linuxbrew/.linuxbrew/bin/brew ]; then
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+fi
+
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 export PATH="/opt/homebrew/opt/rustup/bin:$PATH"

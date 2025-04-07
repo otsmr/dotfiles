@@ -14,6 +14,12 @@ if [ -f /home/linuxbrew/.linuxbrew/bin/brew ]; then
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
 
+if [ -f "$HOME/.cargo/env" ]; then
+  . "$HOME/.cargo/env"
+fi
+
+
+
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 export PATH="/opt/homebrew/opt/rustup/bin:$PATH"

@@ -8,7 +8,7 @@ vim.keymap.set("n", "<C-f>", "<leader>ff", { desc = "Split Window Below", remap 
 vim.keymap.set("n", "<C-f>", "<leader>ff", { desc = "Split Window Below", remap = true })
 
 vim.keymap.set("i", "jk", "<ESC>", opts)
-local actions = require("telescope.actions")
+-- local actions = require("telescope.actions")
 -- vim.keymap.set("n", "<C-f>", actions.find_file, opts)
 vim.keymap.set("n", "<S-q>", "<cmd>Bdelete!<CR>", opts)
 
